@@ -11,7 +11,7 @@ WORKDIR /src
 #RUN dotnet restore "TestApi/TestApi.csproj"
 COPY . .
 #WORKDIR "/src/TestApi"
-RUN dotnet restore "TestApi/TestApi.csproj"
+RUN dotnet restore "TestApi.csproj"
 RUN dotnet build "TestApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
